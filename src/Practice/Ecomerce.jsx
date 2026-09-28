@@ -1998,7 +1998,7 @@ export default function DragDropList() {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h3 style={styles.title}>Reorderable Task List</h3>
+        <h3 style={styles.title}>Reorderable Tasks List</h3>
         <p style={styles.subtitle}>Drag any item to change priority</p>
 
         <div style={styles.list}>
