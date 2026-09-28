@@ -1968,7 +1968,7 @@ export default function DragDropList() {
     e.preventDefault();
   };
 
-  // 3. Drop: array ko reorder karo.
+  // 3. Drop: array ko reorder karo
   const handleDrop = (targetIndex) => {
     // Edge case: agar sahi index nahi mila ya same jagah drop kiya, to return kar jao.
     if (draggedIndex === null || draggedIndex === targetIndex) return;

@@ -297,6 +297,7 @@ function App() {
   return (
     <div>
       <Ecomerce />
+      
     </div>
   );
 }
