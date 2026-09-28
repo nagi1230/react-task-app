@@ -1,0 +1,19 @@
+.app-layout {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.layout-container {
+  display: flex;
+  position: relative;
+}
+
+.layout-content {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+}

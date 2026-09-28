@@ -1,0 +1,66 @@
+/* App.css */
+html, body, #root {
+  margin: 0;
+  height: 100%;
+}
+
+.right-container{
+  position: relative;
+  top: 90px;
+  left: 190px;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Better responsive positioning */
+@media (max-width: 1200px) {
+  .right-container {
+    left: 50px;
+    top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .right-container {
+    left: 20px;
+    top: 20px;
+    max-width: calc(100% - 40px);
+  }
+}
+.right-container p{
+  color: var(--text-white);
+  opacity: 0.9;
+  font-size: 20px;
+}
+.login-form{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login-form label{
+  margin-bottom: -10px;
+}
+
+.submit-btn{
+  margin-top: 15px;
+  width: 180px !important;
+}
+
+.login-link{
+  font-size: 10px;
+}
+.login-link p{
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .screen {
+    flex-direction: column;
+  }
+  .left-half, .right-half {
+    flex: none;
+    height: 112vh;
+  }
+}

@@ -1,0 +1,491 @@
+/* --- General Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --- Header --- */
+.nt-headerwrap {
+  background-color: black;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nt-logo img {
+  height: 40px;
+}
+
+.nt-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nt-menu ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nt-menu ul li a:hover {
+  color: #ccc;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* --- Responsive Menu --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    z-index: 101; /* Added: Keep hamburger above menu overlay */
+    position: relative; /* Added: For z-index to work */
+  }
+  .menu-toggle span {
+    background-color: white;
+  }
+  
+  /* Mobile menu overlay */
+  .nt-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .nt-menu.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .nt-menu ul {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .nt-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0;
+  }
+
+  .nt-menu li:last-child {
+    border-bottom: none;
+  }
+}
+
+/* --- Banner Section --- */
+.section-one {
+  position: relative;
+  background-image: url("https://www.injala.com/images/career/front-end-engineer-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-one::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.banner-heading {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  padding: 0 10px;
+}
+
+/* --- Main Content --- */
+.main-content {
+  background-color: #000;
+  padding: 100px 20px 50px;
+  color: #ccc;
+}
+
+/* Card */
+.card {
+  margin: 50px 0;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background-color: #f4f4f4;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card__current-opening {
+  color: #666;
+  font-size: 16px;
+  align-items: center;
+  gap: 10px;
+}
+
+.card__symbol {
+  font-size: 30px;
+}
+
+.card__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__title-row h3 {
+  font-size: 2rem;
+}
+
+.card__button {
+  background: linear-gradient(72deg, #53a2fe 0%, #7f33eb 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(127, 51, 235, 0.3);
+}
+
+.card__button:hover {
+  background: #7f33eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(127, 51, 235, 0.5);
+}
+
+.card__button:active {
+  transform: translateY(0);
+}
+
+.card__details {
+  color: #666;
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+/* --- Website Content --- */
+.website-content{
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titel h1{
+  color: #fff; /* Changed from #333 to white for visibility on black background */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+ul li{
+  list-style-type: none;
+  padding: 4px 0;
+  line-height: 21px;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* --- Form Card --- */
+.input-card{
+  max-width: 1000px;
+  padding: 30px 20px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.input-card h1{
+  color: black;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.form-container input {
+  padding: 14px 15px;
+  font-size: 16px;
+  border: 1px solid #707070;
+  font-weight: 700;
+  outline: none;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input:focus {
+  border-color: #7f33eb;
+  box-shadow: 0 0 0 3px rgba(127, 51, 235, 0.1);
+}
+
+.form-container input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.form-container input[type="file"] {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* --- Responsive Grids --- */
+@media (max-width: 992px) {
+  .form-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .banner-heading {
+    font-size: 32px;
+  }
+  
+  .section-one {
+    height: 50vh;
+  }
+}
+
+/* Tablet specific styles */
+@media (max-width: 768px) and (min-width: 601px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .website-content {
+    padding: 20px 15px;
+  }
+  
+  .input-card {
+    padding: 25px 15px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card__title-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .banner-heading {
+    font-size: 28px;
+  }
+  
+  .banner-heading h1 {
+    font-size: 24px;
+  }
+
+  .section-one {
+    height: 40vh;
+  }
+
+  .card__button {
+    width: 100%;
+  }
+  
+  .form-container input {
+    font-size: 14px;
+  }
+  
+  .card__title-row h3 {
+    font-size: 1.5rem;
+  }
+  
+  .card {
+    padding: 1rem 1.25rem;
+    margin: 30px 0;
+  }
+  
+  .website-content {
+    padding: 20px 10px;
+  }
+  
+  .titel h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  ul li {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .banner-heading {
+    font-size: 22px;
+  }
+  
+  .banner-heading h1 {
+    font-size: 20px;
+  }
+  
+  .card__title-row h3 {
+    font-size: 1.25rem;
+  }
+  
+  .form-container input {
+    font-size: 13px;
+    padding: 12px;
+  }
+}
+
+
+/*  Footer */
+
+
+.nt-footerwrap {
+  background-color: black;
+  padding: 50px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* for mobile */
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 300px; /* allow it to grow */
+  color: white;
+}
+
+.footer-logo img {
+  width: 180px; /* bigger than header logo */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer-logo ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.footer-logo ul li {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-logo ul li:hover {
+  color: #7f33eb;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  flex: 1 1 150px; /* allow columns to grow equally */
+  margin: 0 20px 0 0; /* right margin between columns */
+}
+
+.footer-content ul:last-child {
+  margin-right: 0; /* remove margin from last column */
+}
+
+.footer-content ul li {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-content ul li:hover {
+  color: #7f33eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

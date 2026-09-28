@@ -1,0 +1,19 @@
+.screen {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-half {
+    flex: 1;
+    background: linear-gradient(92.88deg, #707BD8 15.73%, #B8C0FF 100.2%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .right-half {
+    flex: 1;
+    height: 100vh;
+    background: linear-gradient(180deg, #707BD8 0%, #B8C0FF 100%);
+  }

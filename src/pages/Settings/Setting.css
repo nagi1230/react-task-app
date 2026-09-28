@@ -1,0 +1,18 @@
+ul li{
+        display: flex;
+        justify-content: space-between;
+        background: rgba(203, 209, 255, 1);
+        box-shadow: 0px 0px 48.4px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        border: 1.5px solid rgba(112, 123, 216, 1);
+        background: linear-gradient(156.04deg, rgba(112, 123, 216, 0.2) 0%, rgba(203, 209, 255, 0) 100%);
+        padding: 14px 25px;
+        margin-bottom: 10px; 
+        margin-top: 10px;
+        color: black;
+    }
+
+    /* checkbox tick color */
+ul li input[type="checkbox"]:checked {
+    accent-color: rgba(112, 123, 216, 1); 
+}

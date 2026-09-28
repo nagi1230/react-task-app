@@ -1,0 +1,133 @@
+/* Global Styles */
+@import './variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-2xl);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+
+/* Common Button Styles */
+.btn {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition-normal);
+  border-radius: var(--radius-2xl);
+  padding: 12px 32px;
+}
+
+.btn-primary {
+  background: var(--purple-primary);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button);
+}
+
+/* Common Card Styles */
+.card {
+  background: var(--bg-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+}
+
+/* Common Main Content Styles for All Pages */
+.main-content-container {
+  position: absolute;
+  top: 93px;
+  left: 350px;
+  width: 1500px;
+  height: auto;
+  min-height: 568px;
+  opacity: 1;
+  transform: rotate(0deg);
+  background: rgba(203, 209, 255, 1);
+  border-radius: 30px;
+  padding: 20px 30px;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+/* Common Content Card for All Pages */
+
+.content-card {
+  width: 100%;
+  background: rgba(203, 209, 255, 1);
+  border-radius: 30px;
+  padding: 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--purple-light);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-primary);
+}

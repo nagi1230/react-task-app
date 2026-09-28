@@ -1,0 +1,22 @@
+.profile-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #7C3AED;
+  padding: 15px 40px;
+  z-index: 30;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-text {
+  color: white;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}

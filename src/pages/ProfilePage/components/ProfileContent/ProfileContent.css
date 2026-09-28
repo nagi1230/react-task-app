@@ -1,0 +1,188 @@
+/* .profile-main-content {
+  position: absolute;
+  top: 140px;
+  left: 350px;
+  width: 1400px;
+  height: 568px;
+  opacity: 1;
+  transform: rotate(0deg);
+  background: rgba(203, 209, 255, 1);
+  border-radius: 30px;
+  padding: 20px 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+} */
+
+/* Profile page now uses common classes from globals.css */
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 30px;
+}
+
+.profile-card {
+  background: linear-gradient(92.36deg, #707BD8 0.15%, #B8C0FF 99.79%);
+  border-radius: 20px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+.profile-user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-user-details {
+  color: white;
+}
+
+.profile-username {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.profile-fullname {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Edit button now uses custom Button component */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.stat-card {
+  /* background: white; */
+  border: 1px solid #8B5CF6;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: #8B5CF6;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.stat-icon.joined {
+  background: linear-gradient(135deg, #FDE68A 0%, #FCD34D 100%);
+}
+
+.stat-icon.referrals {
+  background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 100%);
+}
+
+.stat-icon.trollerverse {
+  background: linear-gradient(135deg, #F9A8D4 0%, #EC4899 100%);
+}
+
+.stat-icon.trollerdash {
+  background: linear-gradient(135deg, #C4B5FD 0%, #A78BFA 100%);
+}
+
+.stat-details {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0 0 4px 0;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 16px;
+  color: #1F2937;
+  margin: 0;
+  font-weight: 700;
+}
+
+.personal-info-section {
+  /* background: white; */
+  border-radius: 20px;
+  padding: 15px;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 24px 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+/* Form inputs now use custom Input component */
+
+/* Save button now uses custom Button component */
+
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

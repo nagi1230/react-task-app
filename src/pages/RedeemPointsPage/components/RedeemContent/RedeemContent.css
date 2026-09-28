@@ -1,0 +1,142 @@
+/* Redeem page now uses common classes from globals.css */
+
+/*  Start css for card */
+
+.airdrop-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  padding: 60px 40px;
+}
+
+.airdrop-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .airdrop-illustration img {
+  width: 202.45px;
+  height: 202.45px;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+  animation: float 3s ease-in-out infinite;
+} */
+ 
+.airdrop-illustration img {
+  width: 202.45px;
+  height: 202.45px;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+  animation: float 3s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes float {
+  0%, 100% {
+    transform: rotate(16.98deg) translateY(0);
+  }
+  50% {
+    transform: rotate(16.98deg) translateY(-10px);
+  }
+}
+
+.airdrop-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.airdrop-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--black-color);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.airdrop-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black-color);
+  margin: 0;
+}
+
+.connect-wallet-btn {
+  background: var(--purple-primary);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(153, 0, 255, 0.3);
+}
+
+.connect-wallet-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(153, 0, 255, 0.4);
+}
+
+.connect-wallet-btn:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1300px) {
+  .airdrop-card {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .airdrop-card {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .airdrop-illustration {
+    order: -1;
+  }
+  
+  .airdrop-illustration svg {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .redeem-main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .airdrop-card {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  
+  .airdrop-title {
+    font-size: 24px;
+  }
+  
+  .airdrop-subtitle {
+    font-size: 18px;
+  }
+  
+  .connect-wallet-btn {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+}

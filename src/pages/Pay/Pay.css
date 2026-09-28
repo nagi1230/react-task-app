@@ -1,0 +1,34 @@
+.pay-content-card{
+    width: 100%;
+    background: rgba(203, 209, 255, 1);
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 50px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    background: linear-gradient(92.36deg, #707BD8 0.15%, #B8C0FF 99.79%);
+}
+
+.div{
+    padding: 40px;
+}
+.div h2{
+    color: var(--text-white);
+    display: inline;
+}
+
+span hr{
+    width: 200px;
+   margin:20px 0px
+}
+
+.pay-list {
+    display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-decoration: none;
+        color :var(--text-white);
+        list-style: none;
+}
+
+

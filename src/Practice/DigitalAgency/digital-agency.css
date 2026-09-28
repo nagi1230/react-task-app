@@ -1,0 +1,187 @@
+/* ------------------------------------------------------------------
+   DigitalAgency — design tokens extracted from Figma
+   File: Digital Agency Company Website UI Design Template (Dark Theme)
+   Node: 3-53
+   ------------------------------------------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces */
+  --color-da-bg: #1a1a1a;
+  --color-da-line: #262626;
+  --color-da-surface: #242424;
+  --color-da-surface-2: #333333;
+
+  /* Accent */
+  --color-da-lime: #9eff00;
+  --color-da-lime-mid: #c5ff66;
+  --color-da-lime-soft: #d8ff99;
+
+  /* Text */
+  --color-da-white: #ffffff;
+  --color-da-muted: #e6e6e6;
+  --color-da-dim: #98989a;
+  --color-da-placeholder: #656567;
+  --color-da-offwhite: #fdfffa;
+
+  /* Type */
+  --font-da: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-da-num: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ------------------------------------------------------------------
+   Scoped reset — everything lives under .da-root so this component
+   never leaks styles into the rest of the app.
+   ------------------------------------------------------------------ */
+.da-root {
+  font-family: var(--font-da);
+  background-color: var(--color-da-bg);
+  color: var(--color-da-white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.da-root *,
+.da-root *::before,
+.da-root *::after {
+  box-sizing: border-box;
+}
+
+.da-root button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.da-root input,
+.da-root textarea {
+  font-family: inherit;
+}
+
+/* Figma uses a faint noise/texture tile over the accent-tinted section
+   headers. Recreated here with layered gradients — no binary assets. */
+.da-tint {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--color-da-bg);
+}
+
+.da-tint::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(120% 140% at 50% 0%, rgba(172, 255, 36, 0.18) 0%, rgba(172, 255, 36, 0.05) 45%, transparent 72%),
+    linear-gradient(180deg, rgba(158, 255, 0, 0.04) 0%, transparent 100%);
+}
+
+/* Fine 4px grain, mimicking the tiled texture fill on the Figma frames. */
+.da-tint::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.35;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.022) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.022) 0 1px, transparent 1px 4px);
+}
+
+/* Hero "Abstract Design" — a dense radial burst of hairlines at 30%
+   opacity in Figma. Rebuilt with conic + radial gradients. */
+.da-burst {
+  position: relative;
+  overflow: hidden;
+}
+
+.da-burst::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 160%;
+  aspect-ratio: 1 / 1;
+  transform: translateX(-50%);
+  opacity: 0.3;
+  background:
+    repeating-conic-gradient(
+      from 0deg at 50% 0%,
+      rgba(230, 230, 230, 0.55) 0deg 0.18deg,
+      transparent 0.18deg 1.5deg
+    );
+  mask-image: radial-gradient(60% 55% at 50% 0%, #000 12%, rgba(0, 0, 0, 0.55) 45%, transparent 78%);
+  -webkit-mask-image: radial-gradient(60% 55% at 50% 0%, #000 12%, rgba(0, 0, 0, 0.55) 45%, transparent 78%);
+  pointer-events: none;
+}
+
+.da-burst::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -10%;
+  width: 70%;
+  aspect-ratio: 2 / 1;
+  transform: translateX(-50%);
+  background: radial-gradient(50% 60% at 50% 40%, rgba(158, 255, 0, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Custom range slider (Contact form "Your Budget"). */
+.da-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--color-da-line);
+  outline: none;
+}
+
+.da-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: var(--color-da-lime);
+  border: 3px solid var(--color-da-bg);
+  cursor: pointer;
+}
+
+.da-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--color-da-bg);
+  border-radius: 999px;
+  background: var(--color-da-lime);
+  cursor: pointer;
+}
+
+.da-range:focus-visible {
+  box-shadow: 0 0 0 3px rgba(158, 255, 0, 0.25);
+}
+
+/* Marquee for the "Trusted By 250+ Companies" logo strip on narrow
+   viewports, where the six logos can no longer sit in one row. */
+@keyframes da-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.da-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: da-marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .da-marquee-track {
+    animation: none;
+  }
+}

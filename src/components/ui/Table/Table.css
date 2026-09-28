@@ -1,0 +1,98 @@
+/* .table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  background: white;
+  box-shadow: var(--shadow-md);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+} */
+
+/* Header */
+/* .table-header {
+  background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
+} */
+
+/* .table-header-cell {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 700;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-header-cell:first-child {
+  border-top-left-radius: var(--radius-lg);
+} */
+
+/* .table-header-cell:last-child {
+  border-top-right-radius: var(--radius-lg);
+} */
+
+/* Body */
+/* .table-body {
+  background: white;
+} */
+
+/* .table-row {
+  transition: background var(--transition-fast);
+} */
+
+/* .table-cell {
+  padding: 16px 20px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-light);
+} */
+
+/* Striped */
+/* .table-striped .table-row:nth-child(even) {
+  background: #F9FAFB;
+} */
+
+/* Hoverable */
+/* .table-hoverable .table-row:hover {
+  background: var(--bg-secondary);
+} */
+
+/* Bordered */
+
+/* .table-bordered .table-cell {
+  border: 1px solid var(--border-light);
+} */
+
+/* .table-bordered .table-header-cell {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+} */
+
+/* Empty State */
+
+/* .table-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+} */
+
+/* Last Row */
+
+/* .table-row:last-child .table-cell {
+  border-bottom: none;
+} */
+
+/* Responsive */
+
+/* @media (max-width: 768px) {
+  .table-container {
+    overflow-x: scroll;
+  }
+  
+  .custom-table {
+    min-width: 600px;
+  }
+} */

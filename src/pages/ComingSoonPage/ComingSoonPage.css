@@ -1,0 +1,144 @@
+/* .coming-soon-page {
+  margin-left: 280px;
+  margin-top: 70px;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon-container {
+  width: 100%;
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon-content {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.coming-soon-icon {
+  font-size: 120px;
+  margin-bottom: 30px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.coming-soon-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--purple-primary);
+  margin-bottom: 16px;
+}
+
+.coming-soon-text {
+  font-size: 20px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.coming-soon-subtext {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .coming-soon-page {
+    margin-left: 0;
+  }
+
+  .coming-soon-container {
+    padding: 20px;
+  }
+
+  .coming-soon-icon {
+    font-size: 80px;
+  }
+
+  .coming-soon-title {
+    font-size: 32px;
+  }
+} */
+
+/* Practice */
+
+
+.referral-link-text{
+  margin-top: 8px;
+  background: var(--bg-Filed);
+  color: var(--text-white);
+  width: 500px;
+  padding: 8px 11px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.refer-your-friend-link{
+  color: var(--text-black);
+}
+
+.page-title{
+  font-family: Chewy;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 10px;
+}
+
+.referral-item{
+  margin-top: 40px;
+}
+
+.referral-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 20px; */
+}
+
+.referral-item-content{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.points-text{
+  font-size: medium;
+  font-weight: bolder;
+  margin: 0;
+}
+
+/*  Table Start________________________________*/
+
+.table-container table{
+  width: 100%;
+  height: auto;
+  border-collapse: separate; 
+  border-spacing: 20px 20px;
+}
+
+tr{
+  text-align: center;
+}
+
+td{
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(203, 209, 255, 1);
+  box-shadow: 0px 0px 48.4px 0px rgba(0, 0, 0, 0.15);
+}
