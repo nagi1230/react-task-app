@@ -294,6 +294,7 @@ import React from "react";
 import DigitalAgency from "./Practice/DigitalAgency/DigitalAgency";
 import  Ecomerce from "../src/Practice/Ecomerce"
 function App() {
+  const brokenTest = ;
   return (
     <div>
       <Ecomerce />
